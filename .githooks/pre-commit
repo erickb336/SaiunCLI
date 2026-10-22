@@ -1,0 +1,9 @@
+##!/bin/bash
+set -e
+
+echo "Running pre-commit checks..."
+pip install ".[all]"
+black --check .
+flake8
+
+echo "All checks passed!"
